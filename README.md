@@ -98,10 +98,14 @@ git reset --mixed + hash = Volta para o branch copiado, com acesso aos arquivos 
 git reset --hard + hash = volta para o branch copiado e desconsidera TUDO que um dia existiu depois dele.
 
 *****CRIANDO E ALTERNANDO BRANCHS*****
+git branch + nomeDaBranch = cria uma nova Branch
+git checkout + nomeDaBranch = alterna para a Branch
 
 Um novo Branch é criado a partir do Branch principal com todos os arquivos que continham nele. 
 Os arquivos da branch master são importados pela nova Branch.
-A partir disso, haverá DOIS históricos de commits para cada Branch. Os arquivos de uma Branch não irão se misturar com outras Branchs.
+A partir disso, haverá DOIS históricos de commits para cada Branch.
+Os arquivos de uma Branch não irão se misturar com outras Branchs.
 git branch + nomeDaBranch = cria uma nova branch.
 
-Alternar de uma branch para outra = git checkout + nomeDaBranch.
+Alternar de uma branch para outra = git checkout + nomeDaBranch
+RESUME = Posso manter versões diferentes do meu sistema funcionando em Branchs diferentes.
