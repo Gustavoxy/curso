@@ -1,7 +1,3 @@
-****MEU ARQUIVO DE PROJETO****
-
-Modificação teste no arquivo README.md
-
 CONFIGURANDO O GIT COM NOSSAS INFORMAÇÕES PESSOAIS
 sempre que algo for alterado no projeto, a alteracao será associada ao usuário do git.
 (Quem foi que fez o que no projeto)
@@ -54,7 +50,7 @@ Quando COMMITAMOS, enviamos também uma mensagem/comentário junto ao COMMIT que
 
 Arquivo PRINCIPAL de um Projeto é o README.txt ou README.md = O qual conterá instruções, comentários e como utilizar e configurar os arquivos de projeto, qual é a versão que se encontra o projeto. Contém informações descritivas.
 
-****TRABALHANDO NO BRANCH PRINCIPAL (NA PASTA DO PROJETO)****
+***TRABALHANDO NO BRANCH PRINCIPAL (NA PASTA DO PROJETO)***
 
 Varrer a pasta e verificar o que foi adicionado, modificado, deletado etc...
 git status - Vai mostrar no branch master os arquivos, se houve algum commit e os arquivos "Untracked" (Arquivos que o Git nunca viu ou não está trackeando/monitorando os arquivos).
@@ -101,7 +97,11 @@ git reset --soft + hash = Volta p o branch copiado, c acesso aos arquivos criado
 git reset --mixed + hash = Volta para o branch copiado, com acesso aos arquivos criados após o commit mas fora do projeto.
 git reset --hard + hash = volta para o branch copiado e desconsidera TUDO que um dia existiu depois dele.
 
-*****BRANCHS*****
+*****CRIANDO E ALTERNANDO BRANCHS*****
 
+Um novo Branch é criado a partir do Branch principal com todos os arquivos que continham nele. 
+Os arquivos da branch master são importados pela nova Branch.
+A partir disso, haverá DOIS históricos de commits para cada Branch. Os arquivos de uma Branch não irão se misturar com outras Branchs.
+git branch + nomeDaBranch = cria uma nova branch.
 
-
+Alternar de uma branch para outra = git checkout + nomeDaBranch.
