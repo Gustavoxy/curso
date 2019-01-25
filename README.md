@@ -48,15 +48,16 @@ Ex: Alterei um arquivo que contém mais linhas que o arquivo master. O Git adici
 COMMIT - Enviar para o Git as modificações que fizemos ACOMPANHADO de um COMENTÁRIO que explica o que foi alterado.
 Quando COMMITAMOS, enviamos também uma mensagem/comentário junto ao COMMIT que explica as alterações.
 
-Arquivo PRINCIPAL de um Projeto é o README.txt ou README.md = O qual conterá instruções, comentários e como utilizar e configurar os arquivos de projeto, qual é a versão que se encontra o projeto. Contém informações descritivas.
+Arquivo PRINCIPAL de um Projeto é o README.txt ou README.md = O qual conterá instruções, comentários e como utilizar e configurar os arquivos de projeto, qual é a versão que se encontra o projeto.
+Contém informações descritivas.
 
 ***TRABALHANDO NO BRANCH PRINCIPAL (NA PASTA DO PROJETO)***
-
-Varrer a pasta e verificar o que foi adicionado, modificado, deletado etc...
+git status
+Varre a pasta e verificar o que foi adicionado, modificado, deletado etc...
 git status - Vai mostrar no branch master os arquivos, se houve algum commit e os arquivos "Untracked" (Arquivos que o Git nunca viu ou não está trackeando/monitorando os arquivos).
 
 Arquivos Untrackeds devem ser monitorados pelo Git.
-Setar o Git para monitorar os arquivos - git add NOMEaRQUIVO /ou git add -A(Maiusc) (Vai monitorar TODOS arquivos n trakeados)
+Fazer o Git monitorar os arquivos ("Anexar" os arquivos ao projeto) - git add + nomeArquivo /ou git add -A(Maiúsculo) (Vai monitorar TODOS arquivos NÃO trakeados)
 O Git vai mostrar as alterações no Branch Master e mostrar os arquivos adicionados e modificados.
 
 COMMITAR os arquivos = git commit -m "Comentário do Commit" 
@@ -109,3 +110,17 @@ git branch + nomeDaBranch = cria uma nova branch.
 
 Alternar de uma branch para outra = git checkout + nomeDaBranch
 RESUME = Posso manter versões diferentes do meu sistema funcionando em Branchs diferentes.
+
+*****DIFENÇA ENTRE ARQUIVOS COMMITADOS E ARQUIVOS DO MEU PC (OFFLINE)*****
+git diff - tecla Q, sai do histórico diff
+
+Por exemplo:
+Quero saber quais são as diferenças entre os arquivos que foram commitados e os arquivos que estão em meu computador.
+Quero saber o que foi alterado, criado, excluído etc...
+ANTES DE COMMITAR, quero saber o que foi feito. Para tanto, usamos o comando git diff.
+Saber SOMENTE O NOME dos arquivos modificados: git diff --name-only
+Saber qual foi a alteração em um arquivo específico: git diff + nomeArquivo
+Ex: git diff style.css OU git diff js.js
+VOLTAR um arquivo AO O QUE ERA ANTES : git checkout HEAD (meu Branch ATUAL) -- nomeArquivo.
+Ou seja: git checkout + nomeArquivo volta a versão de algum arquivo ao estado anterior. 
+Ou git checkout pode voltar a versão de algum branch, commit ou arquivo específico.
