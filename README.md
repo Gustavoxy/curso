@@ -1,126 +1,149 @@
-CONFIGURANDO O GIT COM NOSSAS INFORMAÇÕES PESSOAIS
-sempre que algo for alterado no projeto, a alteracao será associada ao usuário do git.
-(Quem foi que fez o que no projeto)
+CONFIGURANDO O GIT COM NOSSAS INFORMAÇÕES PESSOAIS sempre que algo for alterado no projeto, a alteracao será associada ao usuário do git. (Quem foi que fez o que no projeto)
 
-SABER VERSAO DO GIT
-git --version
+SABER VERSAO DO GIT git --version
 
-OUTROS COMANADOS
-git help
+OUTROS COMANADOS git help
 
-CONFIGURAR NOME DO USUÁRIO (MEU NOME)
-git config --global user.name "MeuNome" (nao mostrará nada. Alteracao acontecerá de forma interna)
+CONFIGURAR NOME DO USUÁRIO (MEU NOME) git config --global user.name "MeuNome" (nao mostrará nada. Alteracao acontecerá de forma interna)
 
-CONFIGURAR EMAIL
-git config --global user.email + "meu@email.com"
+CONFIGURAR EMAIL git config --global user.email + "meu@email.com"
 
-QUAL EDITOR ESTOU USANDO
-git config --global core.editor + NOMEdoEDITOR
+QUAL EDITOR ESTOU USANDO git config --global core.editor + NOMEdoEDITOR
 
-SABER O USUARIO CADASTRADO NO GIT
-git config user.name
+SABER O USUARIO CADASTRADO NO GIT git config user.name
 
-SABER O EMAIL CADASTRADO
-git config user.mail.
+SABER O EMAIL CADASTRADO git config user.mail.
 
-SABER TUDO
-git config --list
+SABER TUDO git config --list
 
-NO PROMPT, IR PARA A PASTA DO PROJETO.
-para ver a estrutura da pasta, digita: tree /f
+NO PROMPT, IR PARA A PASTA DO PROJETO. para ver a estrutura da pasta, digita: tree /f
 
-CRIAR PROJETO
-navegar até a pasta do projeto. Criar pasta: mkdir nomePasta
+CRIAR PROJETO navegar até a pasta do projeto. Criar pasta: mkdir nomePasta
 
-INICIAR O REPOSITORIO
-git init - Cria um repositório vazio
+INICIAR O REPOSITORIO git init - Cria um repositório vazio
 
-********O GIT RODA LOCALMENTE E OS PROJETOS SÃO SINCRONIZADOS NO GITHUB********
+O GIT RODA LOCALMENTE E OS PROJETOS SÃO SINCRONIZADOS NO GITHUB
 
-BRANCH - São VERSÕES DIFERENTES do meu sistema. BRANCH PRINCIPAL é a MASTER. Que é a versao principal do sistema.
-É possível SEPARAR um sistema/projeto em várias Branchs.
-Ex: A Branch principal precisa ser atualizada. Para tanto, copiamos a versão principal para ser uma segunda Branch a qual será utilizada pelos programadores para ser atualizada enquanto a primeira Branch (Principal/Master) continuará rodando sem problemas.
+BRANCH - São VERSÕES DIFERENTES do meu sistema. BRANCH PRINCIPAL é a MASTER. Que é a versao principal do sistema. É possível SEPARAR um sistema/projeto em várias Branchs. Ex: A Branch principal precisa ser atualizada. Para tanto, copiamos a versão principal para ser uma segunda Branch a qual
 
-COMMIT - Commitar, Dar um Commit, Dar Commits = Quando fazemos alterações, criamos arquivos novos, trabalhamos no sistema.
-COMMIT - Quando ENVIAMOS ALTERAÇÕES para o Git. MODIFICA os arquivos.O Git Não armazena TODOS os arquivos. Apenas MODIFICA os modifica. 
-Ex: Alterei um arquivo que contém mais linhas que o arquivo master. O Git adiciona essas linhas ao arquivo da Branch. Caso outra pessoa altere o mesmo arquivo, o Git realiza outra modificação no mesmo arquivo e junta as duas modificações em um só arquivo.
+será utilizada pelos programadores para ser atualizada enquanto a primeira Branch (Principal/Master) continuará rodando
 
-COMMIT - Enviar para o Git as modificações que fizemos ACOMPANHADO de um COMENTÁRIO que explica o que foi alterado.
-Quando COMMITAMOS, enviamos também uma mensagem/comentário junto ao COMMIT que explica as alterações.
+sem problemas.
 
-Arquivo PRINCIPAL de um Projeto é o README.txt ou README.md = O qual conterá instruções, comentários e como utilizar e configurar os arquivos de projeto, qual é a versão que se encontra o projeto.
-Contém informações descritivas.
+COMMIT - Commitar, Dar um Commit, Dar Commits = Quando fazemos alterações, criamos arquivos novos, trabalhamos no sistema. COMMIT - Quando ENVIAMOS ALTERAÇÕES para o Git. MODIFICA os arquivos.O Git Não armazena TODOS os arquivos. Apenas MODIFICA
 
-***TRABALHANDO NO BRANCH PRINCIPAL (NA PASTA DO PROJETO)***
-git status
-Varre a pasta e verificar o que foi adicionado, modificado, deletado etc...
-git status - Vai mostrar no branch master os arquivos, se houve algum commit e os arquivos "Untracked" (Arquivos que o Git nunca viu ou não está trackeando/monitorando os arquivos).
+os modifica. Ex: Alterei um arquivo que contém mais linhas que o arquivo master. O Git adiciona essas linhas ao arquivo da Branch. Caso
 
-Arquivos Untrackeds devem ser monitorados pelo Git.
-Fazer o Git monitorar os arquivos ("Anexar" os arquivos ao projeto) - git add + nomeArquivo /ou git add -A(Maiúsculo) (Vai monitorar TODOS arquivos NÃO trakeados)
-O Git vai mostrar as alterações no Branch Master e mostrar os arquivos adicionados e modificados.
+outra pessoa altere o mesmo arquivo, o Git realiza outra modificação no mesmo arquivo e junta as duas modificações em um
 
-COMMITAR os arquivos = git commit -m "Comentário do Commit" 
+só arquivo.
+
+COMMIT - Enviar para o Git as modificações que fizemos ACOMPANHADO de um COMENTÁRIO que explica o que foi alterado. Quando COMMITAMOS, enviamos também uma mensagem/comentário junto ao COMMIT que explica as alterações.
+
+Arquivo PRINCIPAL de um Projeto é o README.txt ou README.md = O qual conterá instruções, comentários e como utilizar e
+
+configurar os arquivos de projeto, qual é a versão que se encontra o projeto. Contém informações descritivas.
+
+TRABALHANDO NO BRANCH PRINCIPAL (NA PASTA DO PROJETO) git status Varre a pasta e verificar o que foi adicionado, modificado, deletado etc... git status - Vai mostrar no branch master os arquivos, se houve algum commit e os arquivos "Untracked" (Arquivos que o Git
+
+nunca viu ou não está trackeando/monitorando os arquivos).
+
+Arquivos Untrackeds devem ser monitorados pelo Git. Fazer o Git monitorar os arquivos ("Anexar" os arquivos ao projeto) - git add + nomeArquivo /ou git add -A(Maiúsculo) (Vai
+
+monitorar TODOS arquivos NÃO trakeados) O Git vai mostrar as alterações no Branch Master e mostrar os arquivos adicionados e modificados.
+
+COMMITAR os arquivos = git commit -m "Comentário do Commit"
 
 LOG DE COMMITS - git log = Vai mostrar em qual Branch estamos e quais foram os commits e quem commitou cada um deles.
 
-1º GIT STATUS (Prestar atenção em qual Branch estamos)
-Ao CRIAR, ALTERAR, MODIFICAR, TRABALHAR NO PROJETO, Podemos ver pelo Git TUDO que foi alterado na pasta do projeto com
-o comando git status. Vai mostrar tudo e o que precisa ser commitado, tudo que foi modificado e todos os Untracked files que precisam ser Trackeados/monitorados.
+1º GIT STATUS (Prestar atenção em qual Branch estamos) Ao CRIAR, ALTERAR, MODIFICAR, TRABALHAR NO PROJETO, Podemos ver pelo Git TUDO que foi alterado na pasta do projeto com o comando git status. Vai mostrar tudo e o que precisa ser commitado, tudo que foi modificado e todos os Untracked files
 
-2º GIT ADD -A ou GIT ADD + NOmeFILE
-Para trakealos e adicionar ao monitoramento, basta utilizar o comando git add -A ou git add nomeArquivo.
-Em seguida, o Git mostrarás TODAS as mudanças.
+que precisam ser Trackeados/monitorados.
 
-3º GIT COMMIT -M "COMENTÁRIO DO COMMIT"
-É preciso commitar os novos arquivos que foram criados, alterados e deletados para o projeto. Os arquivos do meu PC serão disponibilizados para a Branch (no GITHUB/BitBucket) onde estamos trabalhando e disponibilizados para a equipe. Portanto, commitar. git commit -m "Comentário sobre o commit".
+2º GIT ADD -A ou GIT ADD + NOmeFILE Para trakealos e adicionar ao monitoramento, basta utilizar o comando git add -A ou git add nomeArquivo. Em seguida, o Git mostrarás TODAS as mudanças.
+
+3º GIT COMMIT -M "COMENTÁRIO DO COMMIT" É preciso commitar os novos arquivos que foram criados, alterados e deletados para o projeto. Os arquivos do meu PC serão
+
+disponibilizados para a Branch (no GITHUB/BitBucket) onde estamos trabalhando e disponibilizados para a equipe. Portanto,
+
+commitar. git commit -m "Comentário sobre o commit".
 
 COMANDOS IMPORTANTES
 
-git log
-Mostra todo o histórico de tudo que foi feito e por quem foi feito.
-um hash será exibido. os 7 primeiros caractéres do hash são os MAIS IMPORTANTES.
-Mostrará o Branch onde estamos. Ex: (HEAD -> master).
+git log Mostra todo o histórico de tudo que foi feito e por quem foi feito. um hash será exibido. os 7 primeiros caractéres do hash são os MAIS IMPORTANTES. Mostrará o Branch onde estamos. Ex: (HEAD -> master).
 
-git branch
-Lista TODOS OS BRANCHS que temos no projeto e vai marcar com um * em qual branch nós estamos.
+git branch Lista TODOS OS BRANCHS que temos no projeto e vai marcar com um * em qual branch nós estamos.
 
-git add -am
-O Git passa a trackear(Junta os arquivos ao projeto) todos os arquivos e comita os arquivos ao mesmo tempo.
+git add -am O Git passa a trackear(Junta os arquivos ao projeto) todos os arquivos e comita os arquivos ao mesmo tempo.
+
+REVERTENDO ALTERACOES git reset
+
+3 FORMAS Copiar HASH do commit para o qual desejo voltar. git reset --soft + hash = Volta p o branch copiado, c acesso aos arquivos criados após o commit já Trakeados no projeto. git reset --mixed + hash = Volta para o branch copiado, com acesso aos arquivos criados após o commit mas fora do projeto. git reset --hard + hash = volta para o branch copiado e desconsidera TUDO que um dia existiu depois dele.
+
+CRIANDO E ALTERNANDO BRANCHS git branch + nomeDaBranch = cria uma nova Branch git checkout + nomeDaBranch = alterna para a Branch
+
+Um novo Branch é criado a partir do Branch principal com todos os arquivos que continham nele. Os arquivos da branch master são importados pela nova Branch. A partir disso, haverá DOIS históricos de commits para cada Branch. Os arquivos de uma Branch não irão se misturar com outras Branchs. git branch + nomeDaBranch = cria uma nova branch.
+
+Alternar de uma branch para outra = git checkout + nomeDaBranch RESUME = Posso manter versões diferentes do meu sistema funcionando em Branchs diferentes.
+
+DIFENÇA ENTRE ARQUIVOS COMMITADOS E ARQUIVOS DO MEU PC (OFFLINE) git diff - tecla Q, sai do histórico diff
+
+Por exemplo: Quero saber quais são as diferenças entre os arquivos que foram commitados e os arquivos que estão em meu computador. Quero saber o que foi alterado, criado, excluído etc... ANTES DE COMMITAR, quero saber o que foi feito. Para tanto, usamos o comando git diff. Saber SOMENTE O NOME dos arquivos modificados: git diff --name-only Saber qual foi a alteração em um arquivo específico: git diff + nomeArquivo Ex: git diff style.css OU git diff js.js VOLTAR um arquivo AO O QUE ERA ANTES : git checkout HEAD (meu Branch ATUAL) -- nomeArquivo. Ou seja: git checkout + nomeArquivo volta a versão de algum arquivo ao estado anterior. Ou git checkout pode voltar a versão de algum branch, commit ou arquivo específico.
+
+******REPOSITORIO LOCAL x REPOSITORIO REMOTO******
+
+Rep. LOCAL = Na minha máquina, por exemplo.
+Rep. REMOTO = GitGHub, BitBucket...
+
+Na minha conta no GitHub, crio um novo repositório o qual terá uma URL que poderá ser compartilhada.
+PROXIMO PASSO: Enviar nosso repositório local para o repositório remoto. Transferir alterações, arquivos, projetos
+do nosso computador para o GitHub ou BitBucket.
+
+-Baixar e instalar o GitBash - Terminal específico do Git.
+NECESSÁRIO Gerar SSH KEY no GitHub para podermos enviar o Rep.local para Rep.remoto no GitHub.
+SSH KEY identifica o usuário e dá permissão para fazer alterações no Rep. Remoto.
+Usando SSH Key, eu posso me CONECTAR e autenticar no GitHub sem solicitações de usuário ou senha.
+
+CRIAR SSG => https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-windows
+
+O passo-a-passo acima vai criar duas chaves. Uma Pública e uma Privada. "id_rsa" e "id_rsa.pub".
+
+Vá até a pasta padrão onde o Git criou as chaves e "arraste" a chave pública para o editor de codigo para ver o conteúdo.
+COPIAR o conteúdo da chave, ir até o seu GitHub e vá até SETTINGS do usuário do GitHub.
+Em PERSONAL SETTINGS >> SSH and GPG Keys, CLICAR em "New SSG Key" - Dar um Title para a chave e colar o conteúdo da chave
+que foi copiado no editor.
+Agora temos a minha chave pública cadastrada no GitHub e a chave privada no nosso computador.
+Quando enviarmos arquivos do Rep.Local para o Rep.remoto as duas chaves vão bater e o acesso/alterações serão permitidas.
 
 
-*****REVERTENDO ALTERACOES*****
-git reset
+******Enviando arquivos de Rep.Local para Rep.Público******
 
-3 FORMAS 
-Copiar HASH do commit para o qual desejo voltar.
-git reset --soft + hash = Volta p o branch copiado, c acesso aos arquivos criados após o commit já Trakeados no projeto.
-git reset --mixed + hash = Volta para o branch copiado, com acesso aos arquivos criados após o commit mas fora do projeto.
-git reset --hard + hash = volta para o branch copiado e desconsidera TUDO que um dia existiu depois dele.
+ADD um Repositório Remoto ao meu Rep.Local - Ficarão ligados.
 
-*****CRIANDO E ALTERNANDO BRANCHS*****
-git branch + nomeDaBranch = cria uma nova Branch
-git checkout + nomeDaBranch = alterna para a Branch
+SE NÃO HA REPOSITÓRIO NO GIT:
+CRIAMOS e add o repostório criado no GitHub ao repositorio local como a seguir:
 
-Um novo Branch é criado a partir do Branch principal com todos os arquivos que continham nele. 
-Os arquivos da branch master são importados pela nova Branch.
-A partir disso, haverá DOIS históricos de commits para cada Branch.
-Os arquivos de uma Branch não irão se misturar com outras Branchs.
-git branch + nomeDaBranch = cria uma nova branch.
+…or create a new repository on the command line
 
-Alternar de uma branch para outra = git checkout + nomeDaBranch
-RESUME = Posso manter versões diferentes do meu sistema funcionando em Branchs diferentes.
+echo "# curso" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin(NOME) https://github.com/Gustavoxy/curso.git
+git push -u origin master
+--------------------------------------------------------------
 
-*****DIFENÇA ENTRE ARQUIVOS COMMITADOS E ARQUIVOS DO MEU PC (OFFLINE)*****
-git diff - tecla Q, sai do histórico diff
+SE, já temos um Repositório no GitHub...
 
-Por exemplo:
-Quero saber quais são as diferenças entre os arquivos que foram commitados e os arquivos que estão em meu computador.
-Quero saber o que foi alterado, criado, excluído etc...
-ANTES DE COMMITAR, quero saber o que foi feito. Para tanto, usamos o comando git diff.
-Saber SOMENTE O NOME dos arquivos modificados: git diff --name-only
-Saber qual foi a alteração em um arquivo específico: git diff + nomeArquivo
-Ex: git diff style.css OU git diff js.js
-VOLTAR um arquivo AO O QUE ERA ANTES : git checkout HEAD (meu Branch ATUAL) -- nomeArquivo.
-Ou seja: git checkout + nomeArquivo volta a versão de algum arquivo ao estado anterior. 
-Ou git checkout pode voltar a versão de algum branch, commit ou arquivo específico.
+…or push an existing repository from the command line
+
+git remote add origin(NOME) https://github.com/Gustavoxy/curso.git
+git push -u origin master | "origin" que é um NOME que dou, é o DESTINO do push. "master" é a BRANCH que selecionamos.
+Ex:
+git push -u + destino + nomeBranch | git push -u origin Branch2 
+
+Para ver os repositórios conectados: 
+git remote
+git remote -v | vai mostrar (fetch) e (push)
+(fetch) Capacidade que eu tenho de puxar conteúdos do Rep.Remoto para o Rep.Local.
+(push) Levar os arquivos do meu Rep.Local para o Rep.Remoto
