@@ -116,7 +116,7 @@ Agora temos a minha chave pública cadastrada no GitHub e a chave privada no nos
 Quando enviarmos arquivos do Rep.Local para o Rep.remoto as duas chaves vão bater e o acesso/alterações serão permitidas.
 
 
-******Enviando arquivos de Rep.Local para Rep.Público******
+******ENVIANDO(ENVIO) arquivos de Rep.Local para Rep.Público******
 
 ADD um Repositório Remoto ao meu Rep.Local - Ficarão ligados.
 
