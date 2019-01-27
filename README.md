@@ -171,3 +171,10 @@ Agora faça um commit das modificações: $ git commit -m "Removi as pastas"
 Sincronize com repositório remoto: $ git push origin master.
 
 *****GIT REVERT*****
+
+Volta ao estado anterior do commit sem perder o código. REVERTE O COMMIT.
+Pego a Hash do commit:
+git revert --no-edit + hash do commit
+
+As linhas que eu adicionei, serão removidas. Linhas que eu editei, serão revertidas.
+NÃO PERDEMOS O COMMIT.
