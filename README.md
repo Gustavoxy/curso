@@ -159,5 +159,15 @@ git remote -v | vai mostrar (fetch) e (push)
 Ex: Não quero que um determinado arquivo vá para o diretório remoto e que seja desconsiderado pelo Git durante o desenvolvimento.
 Na pasta do projeto, criar um arquivos chamado ".gitignore".
 Dentro do arquivo ".gitignore", especificar(escrevendo) os arquivos os quais devem ser ignorados pelo Git.
+Ignorar umas patas inteira, Ex: nomePasta/*
 Pode ser diversos tipos de arquivos, demais estensões e pastas.
 Dessa forma, os arquivos especificados no .gitignore, ficam fora do repositório.
+
+REMOVER PASTA DO DIRETORIO:
+
+Primeiro certifique-se que o seu repositório está sincronizado com o repositório remoto: $ git pull origin master, (supondo que o branch seja master).
+Então remova a pasta localmente.
+Agora faça um commit das modificações: $ git commit -m "Removi as pastas"
+Sincronize com repositório remoto: $ git push origin master.
+
+*****GIT REVERT*****
