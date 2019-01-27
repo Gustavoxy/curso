@@ -153,3 +153,10 @@ git remote
 git remote -v | vai mostrar (fetch) e (push)
 (fetch) Capacidade que eu tenho de puxar conteúdos do Rep.Remoto para o Rep.Local.
 (push) Levar os arquivos do meu Rep.Local para o Rep.Remoto
+
+*****IGONORAR ARQUIVOS*****
+
+Ex: Não quero que um determinado arquivo vá para o diretório remoto e que seja desconsiderado pelo Git durante o desenvolvimento.
+Na pasta do projeto, criar um arquivos chamado ".gitignore".
+Dentro do arquivo ".gitignore", especificar(escrevendo) os arquivos os quais devem ser ignorados pelo Git.
+Pode ser diversos tipos de arquivos, demais estensões e pastas.
