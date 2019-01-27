@@ -144,6 +144,8 @@ git push -u + destino + nomeBranch | git push -u origin Branch2
 
 SINCRONIZAR DIRETÓRIOS: git pull
 CASO o git push não funcione, será preciso SINCRONIZAR o Rep.Remoto com o Rep.Loca. Para tanto, usar o comando: git pull.
+
+CASO o git pull NÃO FUNCIONE, SALVE TUDO, delete o dirório no GitHub e suba o projeto novamente para um novo repositório criado no GitHub.
 --------------------------------------------------------------
 
 Para ver os repositórios conectados: 
