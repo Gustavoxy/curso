@@ -142,6 +142,10 @@ git push -u origin master | "origin" que é um NOME que dou, é o DESTINO do pus
 Ex:
 git push -u + destino + nomeBranch | git push -u origin Branch2 
 
+SINCRONIZAR DIRETÓRIOS: git pull
+CASO o git push não funcione, será preciso SINCRONIZAR o Rep.Remoto com o Rep.Loca. Para tanto, usar o comando: git pull.
+--------------------------------------------------------------
+
 Para ver os repositórios conectados: 
 git remote
 git remote -v | vai mostrar (fetch) e (push)
