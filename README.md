@@ -198,3 +198,32 @@ git log - para verificar como estão os commits
 
 VERMELHO - REMOTO
 AZUL - LOCAL
+
+Caso algum colaborador faça alguma alteração nos arquivos do repositório, preciso puxar essas alterações.
+Alteraçoes podem ser feitas diretamente no repositório remoto em "Create new file" ou por um push feito pelo Git.
+
+Esses arquivos e alterações, podem não existir no meu projeto.
+Preciso TRAZER os arquivos e alteraçoes do Rep.Remoto para o meu Rep.Local. COMANDO IMPORTANTE que sempre devo fazer antes de continuar o projeto para atualizar meu Rep.Local.
+
+git pull origin + nomeBranch
+
+Ex: "git pull origin master"
+Em seguida, os arquivos serao trazidos para o Rep.Local.
+E então, os repositório, Remoto e Local estarão atualizados e sincronizados.
+IMPORTANTE! = Antes de fazer um PUSH, sempre faça um PULL antes.
+
+*****CLONANDO REPOSITORIOS REMOTOS*****
+
+CRIA uma CÓPIA do repositório. Porém, como posso não ser o dono do Rep, não conseguirei fazer alterações diretamente no repositório.
+Ex: Achei um projeto legal e quero clona-lo.
+Vou copiar o link do Rep.Remoto e vou no meu terminal do Git:
+git clone + "url do projeto"
+"git clone https://github.com/Gustavoxy/curso.git"
+
+----Contribuindo com outros repositórios (fork/pull request)----
+
+Contribuir com projetos que não são nossos.
+
+Quando o projeto não é nosso, fazemos um "FORK".
+No GitHub, clicar em "FORK"
+Com o projeto "Forkado", consigo clonar e fazer alterações.
