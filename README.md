@@ -227,3 +227,21 @@ Contribuir com projetos que não são nossos.
 Quando o projeto não é nosso, fazemos um "FORK".
 No GitHub, clicar em "FORK"
 Com o projeto "Forkado", consigo clonar e fazer alterações.
+
+Entro na pasta do projeto pelo Git, faço as alterações necessárias, commito o projeto e dou um push para o repostório forkado no GitHub.
+
+Em seguida, vou até o projeto original e clico em "NEW PULL REQUEST".
+
+Verificar a BASE que é o destinatário e o HEAD Fork(Eu) estão ok.
+
+Clicar em CREATE NEW REQUEST (Verde) e argumente o que foi feito.
+Clicar em Create pull request.
+
+Receberemos por email se a alteração foi aceita ou não.
+
+---PROCESSO---
+1-Fork para criar o repositorio.
+2-Clone local do projeto.
+3-Altera o projeto, commita e dá um push no projeto.
+4-Pull Request.
+-------------------------------------------------------------------
