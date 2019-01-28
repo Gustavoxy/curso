@@ -80,7 +80,9 @@ REVERTENDO ALTERACOES git reset
 
 3 FORMAS Copiar HASH do commit para o qual desejo voltar. git reset --soft + hash = Volta p o branch copiado, c acesso aos arquivos criados após o commit já Trakeados no projeto. git reset --mixed + hash = Volta para o branch copiado, com acesso aos arquivos criados após o commit mas fora do projeto. git reset --hard + hash = volta para o branch copiado e desconsidera TUDO que um dia existiu depois dele.
 
-CRIANDO E ALTERNANDO BRANCHS git branch + nomeDaBranch = cria uma nova Branch git checkout + nomeDaBranch = alterna para a Branch
+CRIANDO E ALTERNANDO BRANCHS
+git branch + nomeDaBranch = cria uma nova Branch 
+git checkout + nomeDaBranch = alterna para a Branch
 
 Um novo Branch é criado a partir do Branch principal com todos os arquivos que continham nele. Os arquivos da branch master são importados pela nova Branch. A partir disso, haverá DOIS históricos de commits para cada Branch. Os arquivos de uma Branch não irão se misturar com outras Branchs. git branch + nomeDaBranch = cria uma nova branch.
 
@@ -171,10 +173,22 @@ Agora faça um commit das modificações: $ git commit -m "Removi as pastas"
 Sincronize com repositório remoto: $ git push origin master.
 
 *****GIT REVERT*****
+Ex: Fiz um commit com algum problema e quero voltar. git revert + hash
 
-Volta ao estado anterior do commit sem perder o código. REVERTE O COMMIT.
+Volta ao estado anterior do commit sem perder o commit posterior. REVERTE O COMMIT.
 Pego a Hash do commit:
 git revert --no-edit + hash do commit
 
 As linhas que eu adicionei, serão removidas. Linhas que eu editei, serão revertidas.
-NÃO PERDEMOS O COMMIT.
+NÃO PERDEMOS O COMMIT que fizemos errado.
+
+*****DELETAR BRANCHS REMOTOS*****
+Para ter mais de um branch no repositório do GitHub, basta alternar, no Git, para o segundo branch e fazer o push desse branch para o GitHub.
+
+DELETAR a branch REMOTO do GitHub:
+git push origin(nome) + :nomeBranch
+Ex: "git push origin :testes"
+Push com "dois pontos" antes do nomeBranch > Deleta.
+
+DELETAR branch LOCAL:
+Alternar para outra branch que NÃO será deletada e, a partir dessa branch, deletar a branch que deseja.
