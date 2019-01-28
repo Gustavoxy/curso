@@ -186,9 +186,15 @@ NÃO PERDEMOS O COMMIT que fizemos errado.
 Para ter mais de um branch no repositório do GitHub, basta alternar, no Git, para o segundo branch e fazer o push desse branch para o GitHub.
 
 DELETAR a branch REMOTO do GitHub:
-git push origin(nome) + :nomeBranch
+git push origin(nome/DESTINO) + :nomeBranch
 Ex: "git push origin :testes"
 Push com "dois pontos" antes do nomeBranch > Deleta.
 
 DELETAR branch LOCAL:
 Alternar para outra branch que NÃO será deletada e, a partir dessa branch, deletar a branch que deseja.
+
+*****PUXANDO ALTERACOES DE OUTRAS PESSOAS (pull)*****
+git log - para verificar como estão os commits
+
+VERMELHO - REMOTO
+AZUL - LOCAL
