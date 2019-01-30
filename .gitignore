@@ -1,4 +1,8 @@
 data_base.sql
 *.txt
+<<<<<<< HEAD
 *.txt
 assets/
+=======
+30-seconds-of-code/*
+>>>>>>> 6b1afc94048f72225de996726c1f5abb82286dca

@@ -80,7 +80,9 @@ REVERTENDO ALTERACOES git reset
 
 3 FORMAS Copiar HASH do commit para o qual desejo voltar. git reset --soft + hash = Volta p o branch copiado, c acesso aos arquivos criados após o commit já Trakeados no projeto. git reset --mixed + hash = Volta para o branch copiado, com acesso aos arquivos criados após o commit mas fora do projeto. git reset --hard + hash = volta para o branch copiado e desconsidera TUDO que um dia existiu depois dele.
 
-CRIANDO E ALTERNANDO BRANCHS git branch + nomeDaBranch = cria uma nova Branch git checkout + nomeDaBranch = alterna para a Branch
+CRIANDO E ALTERNANDO BRANCHS
+git branch + nomeDaBranch = cria uma nova Branch 
+git checkout + nomeDaBranch = alterna para a Branch
 
 Um novo Branch é criado a partir do Branch principal com todos os arquivos que continham nele. Os arquivos da branch master são importados pela nova Branch. A partir disso, haverá DOIS históricos de commits para cada Branch. Os arquivos de uma Branch não irão se misturar com outras Branchs. git branch + nomeDaBranch = cria uma nova branch.
 
@@ -171,10 +173,75 @@ Agora faça um commit das modificações: $ git commit -m "Removi as pastas"
 Sincronize com repositório remoto: $ git push origin master.
 
 *****GIT REVERT*****
+Ex: Fiz um commit com algum problema e quero voltar. git revert + hash
 
-Volta ao estado anterior do commit sem perder o código. REVERTE O COMMIT.
+Volta ao estado anterior do commit sem perder o commit posterior. REVERTE O COMMIT.
 Pego a Hash do commit:
 git revert --no-edit + hash do commit
 
 As linhas que eu adicionei, serão removidas. Linhas que eu editei, serão revertidas.
-NÃO PERDEMOS O COMMIT.
+NÃO PERDEMOS O COMMIT que fizemos errado.
+
+*****DELETAR BRANCHS REMOTOS*****
+Para ter mais de um branch no repositório do GitHub, basta alternar, no Git, para o segundo branch e fazer o push desse branch para o GitHub.
+
+DELETAR a branch REMOTO do GitHub:
+git push origin(nome/DESTINO) + :nomeBranch
+Ex: "git push origin :testes"
+Push com "dois pontos" antes do nomeBranch > Deleta.
+
+DELETAR branch LOCAL:
+Alternar para outra branch que NÃO será deletada e, a partir dessa branch, deletar a branch que deseja.
+
+*****PUXANDO ALTERACOES DE OUTRAS PESSOAS (pull)*****
+git log - para verificar como estão os commits
+
+VERMELHO - REMOTO
+AZUL - LOCAL
+
+Caso algum colaborador faça alguma alteração nos arquivos do repositório, preciso puxar essas alterações.
+Alteraçoes podem ser feitas diretamente no repositório remoto em "Create new file" ou por um push feito pelo Git.
+
+Esses arquivos e alterações, podem não existir no meu projeto.
+Preciso TRAZER os arquivos e alteraçoes do Rep.Remoto para o meu Rep.Local. COMANDO IMPORTANTE que sempre devo fazer antes de continuar o projeto para atualizar meu Rep.Local.
+
+git pull origin + nomeBranch
+
+Ex: "git pull origin master"
+Em seguida, os arquivos serao trazidos para o Rep.Local.
+E então, os repositório, Remoto e Local estarão atualizados e sincronizados.
+IMPORTANTE! = Antes de fazer um PUSH, sempre faça um PULL antes.
+
+*****CLONANDO REPOSITORIOS REMOTOS*****
+
+CRIA uma CÓPIA do repositório. Porém, como posso não ser o dono do Rep, não conseguirei fazer alterações diretamente no repositório.
+Ex: Achei um projeto legal e quero clona-lo.
+Vou copiar o link do Rep.Remoto e vou no meu terminal do Git:
+git clone + "url do projeto"
+"git clone https://github.com/Gustavoxy/curso.git"
+
+----Contribuindo com outros repositórios (fork/pull request)----
+
+Contribuir com projetos que não são nossos.
+
+Quando o projeto não é nosso, fazemos um "FORK".
+No GitHub, clicar em "FORK"
+Com o projeto "Forkado", consigo clonar e fazer alterações.
+
+Entro na pasta do projeto pelo Git, faço as alterações necessárias, commito o projeto e dou um push para o repostório forkado no GitHub.
+
+Em seguida, vou até o projeto original e clico em "NEW PULL REQUEST".
+
+Verificar a BASE que é o destinatário e o HEAD Fork(Eu) estão ok.
+
+Clicar em CREATE NEW REQUEST (Verde) e argumente o que foi feito.
+Clicar em Create pull request.
+
+Receberemos por email se a alteração foi aceita ou não.
+
+---PROCESSO---
+1-Fork para criar o repositorio.
+2-Clone local do projeto.
+3-Altera o projeto, commita e dá um push no projeto.
+4-Pull Request.
+-------------------------------------------------------------------
